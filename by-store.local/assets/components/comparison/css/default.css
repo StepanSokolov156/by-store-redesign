@@ -1,0 +1,65 @@
+.comparison {}
+
+a.comparison-link {
+	text-decoration: none;
+	/*border-bottom-style: dotted;*/
+	/*border-bottom-width: 1px;*/
+	color:rgba(111, 111, 111, 1);
+
+}
+a.comparison-link:hover {
+    /*border-bottom-style: solid;*/
+    /*background-color: #fff;*/
+    color:#fff;
+}
+a.comparison-link.active {
+	border-bottom: none;
+	background: #242424;
+	color: #fff;
+}
+.table-hover>tbody>tr:hover {
+    background-color: #242424;
+}
+.comparison .comparison-add {display:inline-block;}
+.comparison .comparison-remove,
+.comparison .comparison-go,
+.comparison .comparison-total {display:none;}
+
+.comparison.added .comparison-add {display:none;}
+.comparison.added .comparison-remove,
+.comparison.added.can_compare .comparison-go,
+.comparison.added.can_compare .comparison-total {display:inline-block;}
+.comparison-go{
+    color:rgba(111, 111, 111, 1);
+}
+.comparison-go:hover{
+    color:#fff;
+}
+.comparison .loading {opacity: .7;cursor:default;}
+.comparison .loading:hover {text-decoration: none;}
+
+
+.comparison-table td {padding: 5px;}
+.comparison-table .comparison-head {padding-bottom: 1em;}
+.comparison-table .comparison-head img {min-height: 90px;}
+
+.comparison-table .comparison-remove {
+	display: inline-block;
+	font-weight: normal;
+	background: #000;
+	border:solid 1px #fff;
+	position: absolute;
+	margin-top: .5em;
+	padding: 0 .2em;
+	font-size: .8em;
+	color: #fff;
+}
+.comparison-table thead {border-bottom: 1px solid #AAA;}
+.comparison-table .comparison-corner {text-align: center;vertical-align: bottom;padding-bottom: 1em;}
+.comparison-table .same {display: none;}
+
+.comparison-table tbody .comparison-row:first-child td {padding-top: 2em;}
+
+.comparison-table .field-price {
+	font-weight: bold;
+}

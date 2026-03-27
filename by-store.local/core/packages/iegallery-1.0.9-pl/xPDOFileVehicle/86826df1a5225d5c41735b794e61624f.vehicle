@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'iegallery-1.0.9-pl/xPDOFileVehicle/86826df1a5225d5c41735b794e61624f/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'iegallery',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"iegallery-1.0.9-pl\\/xPDOFileVehicle\\/86826df1a5225d5c41735b794e61624f.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => 'ed96f147b3ffa521c4c29c02083ccb41',
+  'package' => '',
+  'signature' => '86826df1a5225d5c41735b794e61624f',
+  'native_key' => 'ed96f147b3ffa521c4c29c02083ccb41',
+);

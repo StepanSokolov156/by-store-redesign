@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '32f7ab51a03d10a3b3db20e14b07e996',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e2c1d2360e6adac27cc1b7e427f96f5a',
+  'native_key' => 'ajaxformitlogin_notify_classpath',
+  'object' => '{"key":"ajaxformitlogin_notify_classpath","value":".\\/aflizitoast.class.js","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

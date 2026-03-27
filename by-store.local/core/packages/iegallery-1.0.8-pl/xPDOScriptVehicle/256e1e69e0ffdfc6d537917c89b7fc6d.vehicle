@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'iegallery-1.0.8-pl/xPDOScriptVehicle/256e1e69e0ffdfc6d537917c89b7fc6d.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'iegallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'fe822e273defe24e74842d11a37c19d6',
+  'package' => '',
+  'signature' => '256e1e69e0ffdfc6d537917c89b7fc6d',
+  'native_key' => 'fe822e273defe24e74842d11a37c19d6',
+);

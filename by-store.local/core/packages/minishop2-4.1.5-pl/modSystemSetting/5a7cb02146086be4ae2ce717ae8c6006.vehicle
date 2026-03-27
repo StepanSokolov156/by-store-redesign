@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f8dd0d6094e76a812736ca024c188772',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '5a7cb02146086be4ae2ce717ae8c6006',
+  'native_key' => 'ms2_chunks_categories',
+  'object' => '{"key":"ms2_chunks_categories","value":"","xtype":"textfield","namespace":"minishop2","area":"ms2_main","editedon":"2023-04-09 17:19:18"}',
+);

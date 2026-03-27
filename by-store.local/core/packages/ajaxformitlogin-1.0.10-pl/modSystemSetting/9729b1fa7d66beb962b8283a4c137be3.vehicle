@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '11bef9f10e4b243c328d1697ba36696b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9729b1fa7d66beb962b8283a4c137be3',
+  'native_key' => 'ajaxformitlogin_frontend_js',
+  'object' => '{"key":"ajaxformitlogin_frontend_js","value":"[[+assetsUrl]]js\\/default.js","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

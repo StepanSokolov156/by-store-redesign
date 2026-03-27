@@ -1,0 +1,16 @@
+Changelog for Google sitemap generator.
+
+1.0.0
+==============
+- Initial release.
+
+1.0.1
+==============
+- Fixed perfomance problems.
+
+1.0.2
+==============
+- Added ignore list.
+- Added option: save as file.
+- Added option: save file path.
+- added time limit.

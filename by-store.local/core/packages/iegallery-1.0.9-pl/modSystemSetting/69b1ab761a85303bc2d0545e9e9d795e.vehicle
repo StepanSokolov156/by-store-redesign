@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'iegallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '1d087dcb09dfe36b4ce64fe1dee50a7c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '69b1ab761a85303bc2d0545e9e9d795e',
+  'native_key' => 'iegallery_iegalleryms2galleryimportservice_worker',
+  'object' => '{"key":"iegallery_iegalleryms2galleryimportservice_worker","value":"ieGalleryMs2GalleryImportWorker","xtype":"textfield","namespace":"iegallery","area":"iegallery_workers","editedon":null}',
+);

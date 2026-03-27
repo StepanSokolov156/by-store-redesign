@@ -1,0 +1,172 @@
+# === ВАШИ РЕДИРЕКТЫ СРАЗУ ПОСЛЕ ЭТОЙ СТРОКИ ===
+
+RewriteEngine On
+
+# Пример точечного редиректа
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-512gb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-512gb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-128gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-128gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-512gb-belyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-512gb-belyij.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-512gb-biryuzovyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-512gb-biryuzovyij.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-256gb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-256gb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-128gb-pink.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-128gb-pink.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-plus-128gb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/iphone-16-plus-128gb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-plus-256gb-pink.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/16-plus-256gb-pink.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-plus-512gb-ultramarin.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/iphone-16-plus-512gb-ultramarin.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-plus-128gb-ultramarin.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/iphone-16-plus-128gb-ultramarin.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-256gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-256gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-128gb-belyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-128gb-belyij.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-plus-256gb-ultramarin.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/16-plus-256gb-ultramarin.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-plus-512gb-rozovyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/iphone-16-plus-512gb-rozovyij.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-plus-belyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/plus/apple-iphone-16-plus-belyij.html [R=301,L]
+
+# Редиректы для iPhone 16 Pro
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-pro-1tb-desert-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/16-pro-1tb-desert-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-pro-1tb-black-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/16-pro-1tb-black-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-belyij-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-belyij-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-white-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-white-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-pro-128gb-prirodnyij-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/16-pro-128gb-prirodnyij-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-512gb-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-512gb-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-256gb-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-256gb-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-512gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-512gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-128gb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/iphone-16-pro-128gb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/16-pro-128gb-belyij-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/16-pro-128gb-belyij-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-belyij-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/iphone-16-pro-belyij-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-128gb-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/iphone-16-pro-128gb-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-256gb-desert-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/iphone-16-pro-256gb-desert-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-512gb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-512gb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-1tb-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-1tb-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-256gb-black-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro/apple-iphone-16-pro-256gb-black-titan.html [R=301,L]
+
+# Редиректы для iPhone 16 Pro Max
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-256gb-chernyij-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-256gb-chernyij-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-max.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/iphone-16-pro-max.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-max.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-max.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-512gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-512gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-256gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-256gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-1tb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-1tb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-1tb-titan.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-1tb-titan.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-max-1tb-black.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/iphone-16-pro-max-1tb-black.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max-belyij.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max-belyij.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/iphone-16-pro-max-256gb.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/iphone-16-pro-max-256gb.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-max.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-max.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/mobilnie-telephony/apple/iphone-16/apple-iphone-16-pro-max.html$ [NC]
+RewriteRule ^.*$ /catalog/mobilnie-telephony/apple/iphone-16/pro-max/apple-iphone-16-pro-max.html [R=301,L]
+
+# Запрет на доступ к .well-known
+RewriteRule "^\.well-known/" - [L]
+
+# Запрет на доступ к скрытым папкам (например, .git)
+RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+# Перевод URL в нижний регистр (если используется)
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule ^(.*)$ /${tolower:$1} [R=301,L]
+
+# Удаление www
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1  [R=301,L]
+
+# Принудительный HTTPS
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{SERVER_PORT} !^443
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI}  [L,R=301]
+
+# Удаление index.php из URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://by-store.by/  [R=301,L]
+
+RewriteEngine On
+
+# Условие: Если в запросе есть две или более косых черты
+RewriteCond %{THE_REQUEST} \s/+(.*?)/{2,}(.*?)[\s?] [OR]
+RewriteCond %{REQUEST_URI} ^//
+# Правило: Перенаправляем на URL без дублирующихся слешей.
+RewriteRule ^(.*)$ https://by-store.by/%1/%2 [R=301,L]
+
+# Основной блок MODX (ЧПУ)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]

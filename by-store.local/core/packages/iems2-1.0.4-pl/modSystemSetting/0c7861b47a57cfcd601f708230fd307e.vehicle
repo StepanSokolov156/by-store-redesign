@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'iems2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'eda11255a2597d7deeb47317005f4560',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0c7861b47a57cfcd601f708230fd307e',
+  'native_key' => 'iems2_iems2productupdateworker_worker_class',
+  'object' => '{"key":"iems2_iems2productupdateworker_worker_class","value":"IeMs2ProductUpdateWorker","xtype":"textfield","namespace":"iems2","area":"iems2_workers","editedon":null}',
+);

@@ -1,0 +1,54 @@
+1.0.10-pl
+==============
+- Аdded support for old metrica counters
+- Fixed a bug with session clogging
+
+1.0.9-pl
+==============
+- Fixed a bug with user activation
+- Fixed a bug with wrong notify on failed authorization
+- Removed validator UserExists
+
+1.0.8-pl
+==============
+- Fixed a bug with authorization
+
+1.0.7-pl
+==============
+- Code of the ActivateUser snippet has been moved to the class ajaxidentification.class.php
+- Added initialization of the OnUserActivate event.
+- Added system settings ajaxformitlogin_antispam_js_event and ajaxformitlogin_antispam_fieldname
+- Removed default parameter validate for snippet AjaxFormItLogin
+
+1.0.6-pl
+==============
+- Added the ability to display validation errors without changing the layout
+
+1.0.5-pl
+==============
+- Fix bugs
+- Added automatic sending of goals to yandex
+- Added JS event afl_init
+
+1.0.3-pl
+==============
+- Added default parameters for the AjaxFormItLogin snippet
+- Added auto-loading of pdoTools and FormIt
+- Renamed some snippets and chunks
+
+1.0.2-pl
+==============
+- Fixed the error of creating system settings.
+
+1.0.1-pl
+==============
+- Fixed a typo in the parameter.
+
+1.0.0-pl
+==============
+- First stable build.
+
+
+1.0.0-beta
+==============
+- Initial release.

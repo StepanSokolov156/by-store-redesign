@@ -1,0 +1,37 @@
+# OSPanel
+.osp/
+
+# MODX cache
+by-store.local/core/cache/
+by-store.local/core/cache_/
+
+# MODX config with DB credentials
+by-store.local/core/config/config.inc.php
+
+# phpMyAdmin
+phpmyadmin/
+
+# MODX export/import
+by-store.local/core/export/
+by-store.local/core/import/
+
+# MODX packages (installed extras — can be reinstalled)
+by-store.local/core/packages/*.transport.zip
+
+# Large data files
+by-store.local/yml_catalog.yml
+by-store.local/sitemap.xml
+
+# FraudFilter
+by-store.local/pobd0.include.php
+
+# OSPanel/system files
+Thumbs.db
+.DS_Store
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fb5eb28b425662e57202a4afa603a94c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '44a76810b9e6e7cb4c08c8fb27296234',
+  'native_key' => 'ajaxformitlogin_notify_js',
+  'object' => '{"key":"ajaxformitlogin_notify_js","value":"assets\\/components\\/ajaxformitlogin\\/js\\/message_settings.json","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'iegallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '91f37e81c390b2b8df077ee8480970d6',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '473aab8383dc2417bda46b7bedb87b83',
+  'native_key' => 'iegallery',
+  'object' => '{"name":"iegallery","path":"{core_path}components\\/iegallery\\/","assets_path":"{assets_path}components\\/iegallery\\/"}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mstelegram',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '19ec663b4f5a4111a537552e12441b1a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '87a818c43341484c96e5b2b39de2e6f3',
+  'native_key' => 'mstelegram_recipients',
+  'object' => '{"key":"mstelegram_recipients","value":"","xtype":"textfield","namespace":"mstelegram","area":"mstelegram_main","editedon":null}',
+);

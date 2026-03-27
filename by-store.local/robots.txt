@@ -1,0 +1,32 @@
+User-agent: *                  
+Disallow: /manager/            
+Disallow: /assets/components/  
+Disallow: /core/               
+Disallow: /connectors/         
+Disallow: /index.php           
+Disallow: *?*  
+Disallow: *?page=
+Disallow: *openstat=           
+Disallow: *from=               
+Disallow: *utm*=
+Disallow: /korzina.html
+Disallow: /zakazat-zvonok.html
+Disallow: /izbrannoe.html
+Disallow: /poisk-po-tegam.html
+Disallow: /parent
+Allow: /*.jpg                  
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.png
+Allow: /*.pdf
+Allow: /*.doc
+Allow: /*.docx
+Allow: /*.xls
+Allow: /*.xlsx
+Allow: /*.ppt
+Allow: /*.pptx
+Allow: /*.css
+Allow: /*.js
+
+
+Sitemap: https://by-store.by/sitemap.xml

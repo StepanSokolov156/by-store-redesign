@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c0708fb70d9374ac29d9a033b31ddd75',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '06e6ee81e42403d9586272fb0f8a0c9d',
+  'native_key' => 'ajaxformitlogin_notify_classname',
+  'object' => '{"key":"ajaxformitlogin_notify_classname","value":"AflIziToast","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

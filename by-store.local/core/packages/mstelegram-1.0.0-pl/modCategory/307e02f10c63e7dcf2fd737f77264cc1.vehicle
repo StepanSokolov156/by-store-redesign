@@ -1,0 +1,85 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '1076aafd94f8cb4d0318af3f2a790b84' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"msTelegram","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if($modx->event->name != \'msOnCreateOrder\') return;\\n\\n$token = $modx->getOption(\'mstelegram_token\', null, false);\\n$recipients = explode(\',\', $modx->getOption(\'mstelegram_recipients\', null, \'\'));\\n\\n$contacts = $modx->getObject(\'msOrderAddress\', array(\'id\'=> $msOrder->address));\\n$_products = $msOrder->getMany(\'Products\');\\n\\n\\/\\/ \\u0421\\u043f\\u0438\\u0441\\u043e\\u043a \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432 \\u0432 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0435\\n$i = 0;\\n$products = \'\';\\nforeach ($_products as $product) {\\n    $i++;\\n    $products .= \\"{$i}. {$product->name} ({$product->count} \\u0448\\u0442.)\\";\\n}\\n\\n\\/\\/ \\u0422\\u0435\\u043a\\u0441\\u0442 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f\\n$message = \\"\\n\\u041d\\u043e\\u0432\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 #{$msOrder->num}\\n\\u043d\\u0430 \\u0441\\u0443\\u043c\\u043c\\u0443 {$msOrder->cost} \\u0440.\\n-----\\n{$products}\\n-----\\n\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d: {$contacts->phone}\\";\\n\\n$message = urlencode($message);\\nforeach($recipients as $id){\\n\\t$id = trim($id);\\n\\tif(!$id) continue;\\n    $url = \\"https:\\/\\/api.telegram.org\\/bot{$token}\\/sendMessage?chat_id={$id}&text={$message}\\";\\n    $ch = curl_init();\\n    curl_setopt_array($ch, array(CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => true));\\n    $result = curl_exec($ch);\\n    curl_close($ch);\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/mstelegram\\/elements\\/plugins\\/plugin.mstelegram.php","content":"if($modx->event->name != \'msOnCreateOrder\') return;\\n\\n$token = $modx->getOption(\'mstelegram_token\', null, false);\\n$recipients = explode(\',\', $modx->getOption(\'mstelegram_recipients\', null, \'\'));\\n\\n$contacts = $modx->getObject(\'msOrderAddress\', array(\'id\'=> $msOrder->address));\\n$_products = $msOrder->getMany(\'Products\');\\n\\n\\/\\/ \\u0421\\u043f\\u0438\\u0441\\u043e\\u043a \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432 \\u0432 \\u0437\\u0430\\u043a\\u0430\\u0437\\u0435\\n$i = 0;\\n$products = \'\';\\nforeach ($_products as $product) {\\n    $i++;\\n    $products .= \\"{$i}. {$product->name} ({$product->count} \\u0448\\u0442.)\\";\\n}\\n\\n\\/\\/ \\u0422\\u0435\\u043a\\u0441\\u0442 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f\\n$message = \\"\\n\\u041d\\u043e\\u0432\\u044b\\u0439 \\u0437\\u0430\\u043a\\u0430\\u0437 #{$msOrder->num}\\n\\u043d\\u0430 \\u0441\\u0443\\u043c\\u043c\\u0443 {$msOrder->cost} \\u0440.\\n-----\\n{$products}\\n-----\\n\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d: {$contacts->phone}\\";\\n\\n$message = urlencode($message);\\nforeach($recipients as $id){\\n\\t$id = trim($id);\\n\\tif(!$id) continue;\\n    $url = \\"https:\\/\\/api.telegram.org\\/bot{$token}\\/sendMessage?chat_id={$id}&text={$message}\\";\\n    $ch = curl_init();\\n    curl_setopt_array($ch, array(CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => true));\\n    $result = curl_exec($ch);\\n    curl_close($ch);\\n}"}',
+        'guid' => '1df63722eabdcf1c200a18eed86303bf',
+        'native_key' => NULL,
+        'signature' => '6b07d103c1ac43304374ea75ce92e80e',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '046f84dc6b738abfa8bae9ff521f97d5' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnCreateOrder","priority":0,"propertyset":0}',
+              'guid' => '0e4f8badd77ac2a59f8f2c12cc19ee7b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnCreateOrder',
+              ),
+              'signature' => '8225bb8e3a7405ea60deca918281ab4f',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'mstelegram',
+  'resolve' => 
+  array (
+    0 => NULL,
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mstelegram-1.0.0-pl\\/modCategory\\/307e02f10c63e7dcf2fd737f77264cc1\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"mstelegram"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '17652a9d3730ef4554a089272b3a890c',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '307e02f10c63e7dcf2fd737f77264cc1',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"msTelegram","rank":0}',
+);

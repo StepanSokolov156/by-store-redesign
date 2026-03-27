@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'iems2-1.0.4-pl/xPDOFileVehicle/536f257592f797661ee42ef937ad174e/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'iems2',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"iems2-1.0.4-pl\\/xPDOFileVehicle\\/536f257592f797661ee42ef937ad174e.resolve.encryption.resolver","name":"resolve.encryption"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => 'e616000bd9810dc906c09abb9824adb7',
+  'package' => '',
+  'signature' => '536f257592f797661ee42ef937ad174e',
+  'native_key' => 'e616000bd9810dc906c09abb9824adb7',
+);

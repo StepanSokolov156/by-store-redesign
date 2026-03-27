@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '469454bb0a7d2809cfe313b783e909e9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f52f01d9b5962f1079520b4e0ea4fd5d',
+  'native_key' => 'ajaxformitlogin_antispam_js_event',
+  'object' => '{"key":"ajaxformitlogin_antispam_js_event","value":"mousemove","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

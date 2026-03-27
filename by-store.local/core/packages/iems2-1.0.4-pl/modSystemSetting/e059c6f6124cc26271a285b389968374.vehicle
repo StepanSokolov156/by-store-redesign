@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'iems2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '410a080fa0e7b9902feae762a81f0571',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e059c6f6124cc26271a285b389968374',
+  'native_key' => 'iems2_tools_handler_class',
+  'object' => '{"key":"iems2_tools_handler_class","value":"IeMs2Tools","xtype":"textfield","namespace":"iems2","area":"iems2_main","editedon":"2020-04-08 22:19:55"}',
+);

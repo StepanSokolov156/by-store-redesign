@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '847695cff959f80315b018a9b66fbbad',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8ab4b2fbed8948035c55c37076c033d5',
+  'native_key' => 'msimportexport_watcher_handler_class',
+  'object' => '{"key":"msimportexport_watcher_handler_class","value":"MsIeWatcher","xtype":"textfield","namespace":"msimportexport","area":"msimportexport_system","editedon":"2020-03-21 15:34:25"}',
+);

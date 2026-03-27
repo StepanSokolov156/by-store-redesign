@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b5ee1ebcaf90d7f8b35f839242093fa2',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '28d8fe3f8712fe1d257cbfc1c125c980',
+  'native_key' => 'ms2_order_format_num_separator',
+  'object' => '{"key":"ms2_order_format_num_separator","value":"\\/","xtype":"textfield","namespace":"minishop2","area":"ms2_order","editedon":"2023-04-09 17:19:18"}',
+);

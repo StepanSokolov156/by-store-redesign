@@ -1,0 +1,16 @@
+<?php return array (
+  'vehicle_class' => 'encryptedVehicle',
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'iems2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '172200363a16bd0edfb9c86e00c316d2',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '8ffcd770c183fd59e1f2cc7bb87e89e6',
+  'native_key' => 'iems2',
+  'object' => '{"name":"iems2","path":"{core_path}components\\/iems2\\/","assets_path":"{assets_path}components\\/iems2\\/"}',
+);

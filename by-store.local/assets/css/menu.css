@@ -1,0 +1,108 @@
+nav.navbar.bootsnav{
+ border: none;
+ background: none;
+ /*margin-bottom: 150px;*/
+}
+nav.navbar.bootsnav ul.nav > li{
+ margin-right: 10px;
+}
+/*nav.navbar.bootsnav ul.nav > li:before,*/
+/*nav.navbar.bootsnav ul.nav > li:after{*/
+/* content: "";*/
+/* width: 2px;*/
+/* height: 100%;*/
+/* background: #fff;*/
+/* position: absolute;*/
+/* top: 0;*/
+/* opacity: 0.3;*/
+/* transition: all 0.3s ease 0s;*/
+/*}*/
+nav.navbar.bootsnav ul.nav > li:before{ left: 0; }
+nav.navbar.bootsnav ul.nav > li:after{ right: 0; }
+nav.navbar.bootsnav ul.nav > li:hover:before,
+nav.navbar.bootsnav ul.nav > li:hover:after{
+ width: 100%;
+}
+nav.navbar.bootsnav ul.nav > li > a{
+ padding: 15px;
+ margin: 0;
+ color: #fff;
+ text-transform: uppercase;
+ z-index: 1;
+ transition: all 0.5s ease 0.5s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{
+ padding: 15px 30px 15px 15px;
+}
+nav.navbar.bootsnav ul.nav > li > a:hover{ color: #fff; }
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+ position: absolute;
+ margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+ top: 120%;
+ transition: all 0.8s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+ top: 100%;
+ background: radial-gradient(circle at 100% 100%, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#0e0b11f2, #0e0b11f2) 50% 50%/calc(100% - 6px) calc(100% - 16px) no-repeat,
+            linear-gradient(#0e0b11f2, #0e0b11f2) 50% 50%/calc(100% - 16px) calc(100% - 6px) no-repeat,
+            linear-gradient(0deg, transparent 45%, #7855d5 80%, #f599f3 100%);
+border-radius: 8px;
+
+}
+.dropdown-menu.multi-dropdown{
+ position: absolute;
+
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ /*border: solid 3px #F599F3;*/
+ border:none;
+ background: radial-gradient(circle at 100% 100%, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #0e0b11f2 0, #0e0b11f2 5px, transparent 5px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#0e0b11f2, #0e0b11f2) 50% 50%/calc(100% - 6px) calc(100% - 16px) no-repeat,
+            linear-gradient(#0e0b11f2, #0e0b11f2) 50% 50%/calc(100% - 16px) calc(100% - 6px) no-repeat,
+            linear-gradient(0deg, transparent 45%, #7855d5 80%, #f599f3 100%);
+border-radius: 8px;
+
+}
+.fa{font-size:30px;}
+@media only screen and (min-width:990px)
+{
+    .navbar-nav{padding-left:8vw;}
+}
+@media only screen and (max-width:990px){
+ .dropdown-menu.multi-dropdown{ left: 0 !important; }
+ nav.navbar.bootsnav .navbar-toggle{
+ background: none;
+ color: #fff;
+ }
+ nav.navbar.bootsnav ul.nav > li{
+ margin-right: 0;
+ }
+ /*nav.navbar.bootsnav ul.nav > li:before,*/
+ /*nav.navbar.bootsnav ul.nav > li:after{*/
+ /*background: #dca342;*/
+ /*height: 52px;*/
+ /*}*/
+ nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+ padding: 15px;
+ text-align: center;
+ }
+ nav.navbar.bootsnav ul.nav > li > a{
+ color: #fff;
+ border: none;
+ padding: 15px 40px 15px 15px;
+ }
+ nav.navbar.bootsnav ul.nav > li > a:hover{
+ color: #fff;
+ }
+ nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+}

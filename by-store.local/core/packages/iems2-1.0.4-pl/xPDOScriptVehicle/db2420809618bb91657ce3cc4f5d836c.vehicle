@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'iems2-1.0.4-pl/xPDOScriptVehicle/db2420809618bb91657ce3cc4f5d836c.resolve.encryption.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'iems2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '0cac532b435a728d306a51449eab3e3f',
+  'package' => '',
+  'signature' => 'db2420809618bb91657ce3cc4f5d836c',
+  'native_key' => '0cac532b435a728d306a51449eab3e3f',
+);

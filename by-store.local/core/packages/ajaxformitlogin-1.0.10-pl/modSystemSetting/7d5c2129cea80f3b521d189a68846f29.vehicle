@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7c88463db664b10df3e8c09c8fb3799d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7d5c2129cea80f3b521d189a68846f29',
+  'native_key' => 'ajaxformitlogin_antispam_fieldname',
+  'object' => '{"key":"ajaxformitlogin_antispam_fieldname","value":"aflsecret","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

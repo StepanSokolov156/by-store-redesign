@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'ajaxformitlogin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9a9fa6b9fc0f85e55c61822b487bff46',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'dddea165d444ccf42ee30cd5d5238b06',
+  'native_key' => 'ajaxformitlogin_counter_id',
+  'object' => '{"key":"ajaxformitlogin_counter_id","value":"","xtype":"textfield","namespace":"ajaxformitlogin","area":"default","editedon":null}',
+);

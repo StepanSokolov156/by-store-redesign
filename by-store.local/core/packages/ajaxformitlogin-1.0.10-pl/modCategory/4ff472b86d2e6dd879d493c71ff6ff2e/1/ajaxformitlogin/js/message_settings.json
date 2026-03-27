@@ -1,0 +1,12 @@
+{
+  "AflNotify": {},
+  "AflIziToast": {
+    "jsPath": "assets/components/ajaxformitlogin/js/lib/izitoast/iziToast.min.js",
+    "cssPath": "assets/components/ajaxformitlogin/css/lib/izitoast/iziToast.min.css",
+    "handlerClassName": "iziToast",
+    "handlerOptions": {
+      "timeout": 2500,
+      "position": "topCenter"
+    }
+  }
+}

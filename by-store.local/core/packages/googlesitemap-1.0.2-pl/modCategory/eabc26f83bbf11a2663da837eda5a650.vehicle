@@ -1,0 +1,60 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '28fb7536f827578e2068b2755a967d26' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"sitemap","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"set_time_limit(0);\\n\\nif (!$modx->loadClass(\'xmldocument.Sitemap\', MODX_CORE_PATH . \'components\\/googlesitemap\\/model\\/\', true, true)) {\\n    return false;\\n}\\n\\n$sitemap = new Sitemap($modx, $scriptProperties);\\n\\n$sitemap->start();\\n\\nif (strpos($ignore, \',\') !== false) {\\n    $sitemap->ignore = explode(\',\', $ignore);\\n} else {\\n    $sitemap->ignore[0] = $ignore;\\n}\\n\\n$sitemap->asFile = $asFile;\\n$sitemap->saveFilePath = $saveFilePath;\\n\\nreturn $sitemap->save();","locked":0,"properties":"a:2:{s:12:\\"saveFilePath\\";a:7:{s:4:\\"name\\";s:12:\\"saveFilePath\\";s:4:\\"desc\\";s:17:\\"saveFilePath.desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:24:\\"googlesitemap:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"asFile\\";a:7:{s:4:\\"name\\";s:6:\\"asFile\\";s:4:\\"desc\\";s:11:\\"asFile.desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:2:{s:4:\\"text\\";s:6:\\"\\u041d\\u0435\\u0442\\";s:5:\\"value\\";s:5:\\"false\\";}i:1;a:2:{s:4:\\"text\\";s:4:\\"\\u0414\\u0430\\";s:5:\\"value\\";s:4:\\"true\\";}}s:5:\\"value\\";s:5:\\"false\\";s:7:\\"lexicon\\";s:24:\\"googlesitemap:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"","content":"set_time_limit(0);\\n\\nif (!$modx->loadClass(\'xmldocument.Sitemap\', MODX_CORE_PATH . \'components\\/googlesitemap\\/model\\/\', true, true)) {\\n    return false;\\n}\\n\\n$sitemap = new Sitemap($modx, $scriptProperties);\\n\\n$sitemap->start();\\n\\nif (strpos($ignore, \',\') !== false) {\\n    $sitemap->ignore = explode(\',\', $ignore);\\n} else {\\n    $sitemap->ignore[0] = $ignore;\\n}\\n\\n$sitemap->asFile = $asFile;\\n$sitemap->saveFilePath = $saveFilePath;\\n\\nreturn $sitemap->save();"}',
+        'guid' => '509560154c92dd543d19f569153fdb7d',
+        'native_key' => NULL,
+        'signature' => '3f1e28a248f8909b4734ace16da86d81',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => true,
+      'update_object' => true,
+    ),
+    'Snippets' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+  ),
+  'namespace' => 'googlesitemap',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"googlesitemap-1.0.2-pl\\/modCategory\\/eabc26f83bbf11a2663da837eda5a650\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"googlesitemap"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"googlesitemap-1.0.2-pl\\/modCategory\\/eabc26f83bbf11a2663da837eda5a650.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f256a805aba8db884ad7d316ccfe5736',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'eabc26f83bbf11a2663da837eda5a650',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Googlesitemap","rank":0}',
+);

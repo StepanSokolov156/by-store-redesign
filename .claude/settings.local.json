@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"C:/OSPanel/home/by-store.local/core/cache\" -mindepth 1 -not -name '.htaccess' -not -name '.gitkeep' -exec rm -rf {} +)",
+      "Bash(find \"C:/OSPanel/home/by-store.local/core/cache_\" -mindepth 1 -not -name '.htaccess' -not -name '.gitkeep' -exec rm -rf {} +)",
+      "Bash(gh auth:*)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh --version)"
+    ]
+  }
+}
