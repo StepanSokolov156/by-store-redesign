@@ -38,7 +38,12 @@ Comparison = {
 					}
 					$this.removeClass(options.loading);
 					if (response.success) {
-						$(options.total, selector).text(response.data.total);
+						var $total = $(options.total, selector);
+						if (response.data.total > 0) {
+							$total.text(response.data.total).show();
+						} else {
+							$total.text('').hide();
+						}
 
 						if (response.data.link) {
 							$(options.go, selector).attr('href', response.data.link);
@@ -119,7 +124,12 @@ Comparison = {
 						if (response.data.total < minItems) {
 							document.location = document.location.pathname;
 						}
-						$(options.total).text(response.data.total);
+						var $total = $(options.total);
+						if (response.data.total > 0) {
+							$total.text(response.data.total).show();
+						} else {
+							$total.text('').hide();
+						}
 
 						$parent.find('tr').each(function() {
 							$(this).find('th:eq('+index+'), td:eq('+index+')').remove();
