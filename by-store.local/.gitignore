@@ -1,0 +1,26 @@
+# MODX Cache
+core/cache/
+core/cache_/
+core/export/
+
+# Thumbnails
+assets/components/phpthumbof/cache/
+
+# Database dumps
+*.sql
+!migrations/*.sql
+
+# OSPanel
+.osp/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+_update_main_tpl.php
