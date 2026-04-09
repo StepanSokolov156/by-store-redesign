@@ -383,34 +383,30 @@ BYStore.sliders = {
     },
 
     bindHeroNavigation() {
-        const mainDots = document.querySelectorAll('.hero__main .hero__dot');
-        mainDots.forEach((dot) => {
+        const mainDots = document.querySelectorAll('#heroMainDots .hero__dot');
+        mainDots.forEach((dot, index) => {
             dot.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const slideDots = dot.closest('.hero__dots').querySelectorAll('.hero__dot');
-                const dotIndex = Array.from(slideDots).indexOf(dot);
-                this.instances.heroMain.slideToLoop(dotIndex);
+                this.instances.heroMain.slideToLoop(index);
             });
         });
 
-        const mainPrevBtns = document.querySelectorAll('.hero__main .hero__arrow--prev');
-        const mainNextBtns = document.querySelectorAll('.hero__main .hero__arrow--next');
+        const mainPrevBtn = document.getElementById('heroMainPrev');
+        const mainNextBtn = document.getElementById('heroMainNext');
 
-        mainPrevBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
+        if (mainPrevBtn) {
+            mainPrevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation();
                 this.instances.heroMain.slidePrev();
             });
-        });
+        }
 
-        mainNextBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
+        if (mainNextBtn) {
+            mainNextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation();
                 this.instances.heroMain.slideNext();
             });
-        });
+        }
 
         this.instances.heroMain.on('slideChange', () => {
             this.updateHeroDots(this.instances.heroMain.realIndex);
@@ -418,12 +414,9 @@ BYStore.sliders = {
     },
 
     updateHeroDots(activeIndex) {
-        const slides = document.querySelectorAll('.heroMainSwiper .swiper-slide');
-        slides.forEach(slide => {
-            const dots = slide.querySelectorAll('.hero__dot');
-            dots.forEach((dot, dotIndex) => {
-                dot.classList.toggle('hero__dot--active', dotIndex === activeIndex);
-            });
+        const dots = document.querySelectorAll('#heroMainDots .hero__dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('hero__dot--active', index === activeIndex);
         });
     },
 
@@ -629,14 +622,20 @@ BYStore.sliders = {
     },
 
     initProductFilters() {
-        const filterButtons = document.querySelectorAll('.products-filter__btn');
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterButtons.forEach(b => b.classList.remove('products-filter__btn--active'));
-                btn.classList.add('products-filter__btn--active');
+        const filterContainers = document.querySelectorAll('.products-filter');
+        filterContainers.forEach(filterEl => {
+            const buttons = filterEl.querySelectorAll('.products-filter__btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('products-filter__btn--active'));
+                    btn.classList.add('products-filter__btn--active');
 
-                const category = btn.getAttribute('data-category');
-                this.filterProducts(category);
+                    const category = btn.getAttribute('data-category');
+                    const section = filterEl.closest('.products-section');
+                    if (section) {
+                        this.filterProducts(section, category);
+                    }
+                });
             });
         });
 
@@ -644,44 +643,48 @@ BYStore.sliders = {
     },
 
     initDraggableScroll() {
-        const filterContainer = document.getElementById('productsFilter');
-        if (!filterContainer) return;
+        const filterIds = ['productsFilter', 'newArrivalsFilter', 'recommendedFilter', 'saleFilter'];
 
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        filterIds.forEach(id => {
+            const filterContainer = document.getElementById(id);
+            if (!filterContainer) return;
 
-        const events = {
-            start: (e) => {
-                isDown = true;
-                filterContainer.classList.add('dragging');
-                startX = (e.pageX || e.touches[0].pageX) - filterContainer.offsetLeft;
-                scrollLeft = filterContainer.scrollLeft;
-            },
-            end: () => {
-                isDown = false;
-                filterContainer.classList.remove('dragging');
-            },
-            move: (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = (e.pageX || e.touches[0].pageX) - filterContainer.offsetLeft;
-                const walk = (x - startX) * 2;
-                filterContainer.scrollLeft = scrollLeft - walk;
-            }
-        };
+            let isDown = false;
+            let startX;
+            let scrollLeft;
 
-        filterContainer.addEventListener('mousedown', events.start);
-        filterContainer.addEventListener('mouseleave', events.end);
-        filterContainer.addEventListener('mouseup', events.end);
-        filterContainer.addEventListener('mousemove', events.move);
-        filterContainer.addEventListener('touchstart', events.start, { passive: true });
-        filterContainer.addEventListener('touchend', events.end);
-        filterContainer.addEventListener('touchmove', events.move, { passive: true });
+            const events = {
+                start: (e) => {
+                    isDown = true;
+                    filterContainer.classList.add('dragging');
+                    startX = (e.pageX || e.touches[0].pageX) - filterContainer.offsetLeft;
+                    scrollLeft = filterContainer.scrollLeft;
+                },
+                end: () => {
+                    isDown = false;
+                    filterContainer.classList.remove('dragging');
+                },
+                move: (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = (e.pageX || e.touches[0].pageX) - filterContainer.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    filterContainer.scrollLeft = scrollLeft - walk;
+                }
+            };
+
+            filterContainer.addEventListener('mousedown', events.start);
+            filterContainer.addEventListener('mouseleave', events.end);
+            filterContainer.addEventListener('mouseup', events.end);
+            filterContainer.addEventListener('mousemove', events.move);
+            filterContainer.addEventListener('touchstart', events.start, { passive: true });
+            filterContainer.addEventListener('touchend', events.end);
+            filterContainer.addEventListener('touchmove', events.move, { passive: true });
+        });
     },
 
-    filterProducts(category) {
-        const swiper = document.querySelector('.productsSwiper');
+    filterProducts(section, category) {
+        const swiper = section.querySelector('.swiper');
         if (!swiper) return;
 
         const slides = swiper.querySelectorAll('.swiper-slide');
@@ -690,9 +693,20 @@ BYStore.sliders = {
             slide.style.display = (category === 'all' || slideCategory === category) ? '' : 'none';
         });
 
-        if (this.instances.hits) {
-            this.instances.hits.update();
-            this.instances.hits.slideTo(0);
+        // Find the slider instance matching this section
+        const sliderConfigs = [
+            { selector: '.productsSwiper', name: 'hits' },
+            { selector: '.newArrivalsSwiper', name: 'newArrivals' },
+            { selector: '.recommendedSwiper', name: 'recommended' },
+            { selector: '.saleSwiper', name: 'sale' }
+        ];
+
+        for (const config of sliderConfigs) {
+            if (section.querySelector(config.selector) && this.instances[config.name]) {
+                this.instances[config.name].update();
+                this.instances[config.name].slideTo(0);
+                break;
+            }
         }
     },
 

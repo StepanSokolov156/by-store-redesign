@@ -1249,8 +1249,9 @@ ul, ol {
 .hero__main .hero__nav {
     position: absolute;
     bottom: 8px;
-    left: 30px;
-    right: 30px;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
 }
 
 .hero__dots {
@@ -1310,11 +1311,12 @@ ul, ol {
 
 /* Right Slider navigation */
 .hero__nav--products {
-    padding: 8px 12px;
+    padding: 0 12px;
+    margin-top: 12px;
 }
 
 .hero__nav--products .hero__dots {
-    width: 80px;
+    width: auto;
 }
 
 /* Right Slider: Product Cards */
@@ -1486,7 +1488,7 @@ ul, ol {
 
 .product-card__favorites,
 .product-card__compare {
-    display: flex;
+    display: flex !important;
     width: 40px;
     height: 40px;
     padding-top: 1px;

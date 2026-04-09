@@ -15,13 +15,13 @@
                                     <div class="hero__slide">
                                         <div class="hero__content">
                                             <h1 class="hero__title">
-                                                <span class="hero__title-gradient">Iphone 16 Pro Max</span> - хит 2025 года
+                                                <span class="hero__title-gradient">iPhone 16 Pro Max</span> — хит 2025 года
                                             </h1>
                                             <p class="hero__description">Имеет лучшую автономность и заметно больший экран по сравнению с 16 Pro. При этом габариты также крупнее, а вес тяжелее на 28 г. Выбор за вами!</p>
                                             <button class="btn btn--primary">Смотреть в каталоге</button>
                                         </div>
                                         <div class="hero__image">
-                                            <img src="img/slider-iphone.png" alt="iPhone 16 Pro Max">
+                                            <img src="img/slider-iphone.png" alt="iPhone 16 Pro Max" loading="lazy">
                                         </div>
                                         <!-- Navigation -->
                                         <div class="hero__nav">
@@ -50,7 +50,7 @@
                                             <button class="btn btn--primary">Смотреть в каталоге</button>
                                         </div>
                                         <div class="hero__image">
-                                            <img src="img/slider-samsung.png" alt="Samsung Galaxy">
+                                            <img src="img/slider-samsung.png" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                         </div>
                                         <!-- Navigation -->
                                         <div class="hero__nav">
@@ -79,7 +79,7 @@
                                             <button class="btn btn--primary">Смотреть в каталоге</button>
                                         </div>
                                         <div class="hero__image">
-                                            <img src="img/slider-iphone.png" alt="Apple Watch">
+                                            <img src="img/slider-iphone.png" alt="Apple Watch Series 9" loading="lazy">
                                         </div>
                                         <!-- Navigation -->
                                         <div class="hero__nav">
@@ -121,7 +121,7 @@
                                 <div class="swiper-slide">
                                     <div class="product-card product-card--small">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple iPhone 15 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple iPhone 15 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -148,7 +148,7 @@
                                 <div class="swiper-slide">
                                     <div class="product-card product-card--small">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Samsung Galaxy">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -175,7 +175,7 @@
                                 <div class="swiper-slide">
                                     <div class="product-card product-card--small">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Xiaomi">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Xiaomi">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -228,7 +228,7 @@
                 <h2 class="section__title">Популярные категории</h2>
                 <div class="popular-categories__grid">
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-1.png" alt="Смартфоны" class="popular-category-card__image">
+                        <img src="img/cat-1.png" alt="Смартфоны" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Смартфоны</h3>
                             <span class="popular-category-card__link">
@@ -238,7 +238,7 @@
                         </div>
                     </a>
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-2.png" alt="Планшеты" class="popular-category-card__image">
+                        <img src="img/cat-2.png" alt="Планшеты" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Планшеты</h3>
                             <span class="popular-category-card__link">
@@ -248,7 +248,7 @@
                         </div>
                     </a>
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-3.png" alt="Часы" class="popular-category-card__image">
+                        <img src="img/cat-3.png" alt="Часы" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Часы</h3>
                             <span class="popular-category-card__link">
@@ -258,7 +258,7 @@
                         </div>
                     </a>
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-4.png" alt="Компьютеры и ноутбуки" class="popular-category-card__image">
+                        <img src="img/cat-4.png" alt="Компьютеры и ноутбуки" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Компьютеры и ноутбуки</h3>
                             <span class="popular-category-card__link">
@@ -268,7 +268,7 @@
                         </div>
                     </a>
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-6.png" alt="Пылесосы" class="popular-category-card__image">
+                        <img src="img/cat-6.png" alt="Пылесосы" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Пылесосы</h3>
                             <span class="popular-category-card__link">
@@ -278,7 +278,7 @@
                         </div>
                     </a>
                     <a href="#" class="popular-category-card">
-                        <img src="img/cat-5.png" alt="Телевизоры" class="popular-category-card__image">
+                        <img src="img/cat-5.png" alt="Телевизоры" class="popular-category-card__image" loading="lazy">
                         <div class="popular-category-card__content">
                             <h3 class="popular-category-card__title">Телевизоры</h3>
                             <span class="popular-category-card__link">
@@ -297,7 +297,7 @@
                 <h2 class="section__title">Каталог</h2>
                 <div class="catalog__grid">
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-1.png" alt="Смартфоны">
+                        <img src="img/cat-1.png" alt="Смартфоны" loading="lazy">
                         <h3 class="catalog-card__title">Смартфоны</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -305,7 +305,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-2.png" alt="Планшеты">
+                        <img src="img/cat-2.png" alt="Планшеты" loading="lazy">
                         <h3 class="catalog-card__title">Планшеты</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -313,7 +313,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-3.png" alt="Часы">
+                        <img src="img/cat-3.png" alt="Часы" loading="lazy">
                         <h3 class="catalog-card__title">Часы</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -321,7 +321,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-4.png" alt="Ноутбуки">
+                        <img src="img/cat-4.png" alt="Ноутбуки" loading="lazy">
                         <h3 class="catalog-card__title">Ноутбуки</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -329,7 +329,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-5.png" alt="Телевизоры">
+                        <img src="img/cat-5.png" alt="Телевизоры" loading="lazy">
                         <h3 class="catalog-card__title">Телевизоры</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -337,7 +337,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card">
-                        <img src="img/cat-6.png" alt="Роботы-пылесосы">
+                        <img src="img/cat-6.png" alt="Роботы-пылесосы" loading="lazy">
                         <h3 class="catalog-card__title">Роботы-пылесосы</h3>
                         <span class="catalog-card__link">
                             В каталог
@@ -345,7 +345,7 @@
                         </span>
                     </a>
                     <a href="#" class="catalog-card catalog-card--wide">
-                        <img src="img/cat-7.png" alt="Подарочные сертификаты">
+                        <img src="img/cat-7.png" alt="Подарочные сертификаты" loading="lazy">
                         <div class="catalog-card__content">
                             <h3 class="catalog-card__title">Подарочные сертификаты</h3>
                             <span class="catalog-card__link">Заказать</span>
@@ -388,7 +388,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple iPhone 15 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple iPhone 15 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -414,7 +414,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="iPhone 16 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="iPhone 16 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -440,7 +440,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Samsung Galaxy">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -466,7 +466,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Xiaomi 14">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Xiaomi 14">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -492,7 +492,7 @@
                                 <div class="swiper-slide" data-category="watches">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple Watch">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple Watch Series 9" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -518,7 +518,7 @@
                                 <div class="swiper-slide" data-category="laptops">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="MacBook Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="MacBook Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -583,7 +583,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple iPhone 15 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple iPhone 15 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -609,7 +609,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="iPhone 16 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="iPhone 16 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -635,7 +635,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Samsung Galaxy">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -661,7 +661,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Xiaomi 14">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Xiaomi 14">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -687,7 +687,7 @@
                                 <div class="swiper-slide" data-category="watches">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple Watch">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple Watch Series 9" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -713,7 +713,7 @@
                                 <div class="swiper-slide" data-category="laptops">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="MacBook Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="MacBook Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -778,7 +778,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple iPhone 15 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple iPhone 15 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -804,7 +804,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="iPhone 16 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="iPhone 16 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -830,7 +830,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Samsung Galaxy">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -856,7 +856,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Xiaomi 14">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Xiaomi 14">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -882,7 +882,7 @@
                                 <div class="swiper-slide" data-category="watches">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple Watch">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple Watch Series 9" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -908,7 +908,7 @@
                                 <div class="swiper-slide" data-category="laptops">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="MacBook Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="MacBook Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -973,7 +973,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple iPhone 15 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple iPhone 15 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -999,7 +999,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="iPhone 16 Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="iPhone 16 Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -1025,7 +1025,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Samsung Galaxy">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Samsung Galaxy S24 Ultra" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -1051,7 +1051,7 @@
                                 <div class="swiper-slide" data-category="phones">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Xiaomi 14">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Xiaomi 14">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -1077,7 +1077,7 @@
                                 <div class="swiper-slide" data-category="watches">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="Apple Watch">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="Apple Watch Series 9" loading="lazy">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -1103,7 +1103,7 @@
                                 <div class="swiper-slide" data-category="laptops">
                                     <div class="product-card">
                                         <div class="product-card__image">
-                                            <img src="img/product-card-img.png" alt="MacBook Pro">
+                                            <img src="img/product-card-img.png" loading="lazy" alt="MacBook Pro">
                                             <div class="product-card__actions">
                                                 <button class="product-card__favorites" aria-label="Добавить в избранное">
                                                     <img src="icon/wishlist.svg" width="20" height="20" alt="">
@@ -1149,12 +1149,12 @@
                     <form class="lead-form__form" id="leadForm">
                         <div class="lead-form__fields-inline">
                             <div class="form-group">
-                                <label class="form-label">Ваше имя <span class="form-label__required">*</span></label>
-                                <input type="text" class="form-input" placeholder="Введите имя" required>
+                                <label class="form-label" for="leadName">Ваше имя <span class="form-label__required">*</span></label>
+                                <input type="text" id="leadName" name="name" class="form-input" placeholder="Введите имя" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Телефон <span class="form-label__required">*</span></label>
-                                <input type="tel" class="form-input" placeholder="+375 (__) ___ -__ - __" required>
+                                <label class="form-label" for="leadPhone">Телефон <span class="form-label__required">*</span></label>
+                                <input type="tel" id="leadPhone" name="phone" class="form-input" placeholder="+375 (__) ___ -__ - __" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1235,22 +1235,22 @@
                 <div class="brands-swiper swiper">
                     <div class="swiper-wrapper">
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-apple.png" alt="Apple">
+                            <img src="icon/brand-apple.png" alt="Apple" loading="lazy">
                         </a>
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-samsung.png" alt="Samsung">
+                            <img src="icon/brand-samsung.png" alt="Samsung" loading="lazy">
                         </a>
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-honor.png" alt="Honor">
+                            <img src="icon/brand-honor.png" alt="Honor" loading="lazy">
                         </a>
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-mi.png" alt="Xiaomi">
+                            <img src="icon/brand-mi.png" alt="Xiaomi" loading="lazy">
                         </a>
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-oneplus.png" alt="OnePlus">
+                            <img src="icon/brand-oneplus.png" alt="OnePlus" loading="lazy">
                         </a>
                         <a href="#" class="swiper-slide brand-card">
-                            <img src="icon/brand-poco.png" alt="POCO">
+                            <img src="icon/brand-poco.png" alt="POCO" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -1397,16 +1397,16 @@
                             <div class="swiper-slide">
                                 <article class="article-card">
                                     <div class="article-card__image">
-                                        <img src="img/article-1.png" alt="Как выбрать смартфон">
+                                        <img src="img/article-1.png" alt="Как выбрать смартфон" loading="lazy">
                                     </div>
                                     <div class="article-card__content">
                                         <time class="article-card__date" datetime="2025-01-15">15.01.2025</time>
                                         <h3 class="article-card__title">Как выбрать смартфон: полный гид по покупке</h3>
                                         <p class="article-card__text">Рассказываем, на что обратить внимание при выборе нового смартфона — от процессора до камеры. Полное руководство для тех, кто хочет получить максимум за свои деньги.</p>
-                                        <span class="article-card__link">
+                                        <a href="#" class="article-card__link">
                                             Читать статью
                                             <img src="icon/arrow-right.svg" alt="" class="article-card__arrow">
-                                        </span>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -1414,16 +1414,16 @@
                             <div class="swiper-slide">
                                 <article class="article-card">
                                     <div class="article-card__image">
-                                        <img src="img/article-2.png" alt="Обзор iPhone 16">
+                                        <img src="img/article-2.png" alt="Обзор iPhone 16" loading="lazy">
                                     </div>
                                     <div class="article-card__content">
                                         <time class="article-card__date" datetime="2025-01-10">10.01.2025</time>
                                         <h3 class="article-card__title">iPhone 16: стоит ли обновляться?</h3>
                                         <p class="article-card__text">Детальный обзор новейшего флагмана от Apple. Разбираем новые функции, производительность камеры и автономность.</p>
-                                        <span class="article-card__link">
+                                        <a href="#" class="article-card__link">
                                             Читать статью
                                             <img src="icon/arrow-right.svg" alt="" class="article-card__arrow">
-                                        </span>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -1431,16 +1431,16 @@
                             <div class="swiper-slide">
                                 <article class="article-card">
                                     <div class="article-card__image">
-                                        <img src="img/article-3.png" alt="Сравнение Samsung Galaxy">
+                                        <img src="img/article-3.png" alt="Сравнение Samsung Galaxy" loading="lazy">
                                     </div>
                                     <div class="article-card__content">
                                         <time class="article-card__date" datetime="2025-01-05">05.01.2025</time>
                                         <h3 class="article-card__title">Samsung Galaxy S25 против S24: что изменилось</h3>
                                         <p class="article-card__text">Сравниваем два поколения флагманов Samsung. Worth it upgrade или лучше подождать? Разбираем все отличия.</p>
-                                        <span class="article-card__link">
+                                        <a href="#" class="article-card__link">
                                             Читать статью
                                             <img src="icon/arrow-right.svg" alt="" class="article-card__arrow">
-                                        </span>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -1448,16 +1448,16 @@
                             <div class="swiper-slide">
                                 <article class="article-card">
                                     <div class="article-card__image">
-                                        <img src="img/article-4.png" alt="Лучшие аксессуары">
+                                        <img src="img/article-4.png" alt="Лучшие аксессуары" loading="lazy">
                                     </div>
                                     <div class="article-card__content">
                                         <time class="article-card__date" datetime="2024-12-28">28.12.2024</time>
                                         <h3 class="article-card__title">ТОП-10 аксессуаров для вашего телефона</h3>
                                         <p class="article-card__text">Подборка лучших чехлов, защитных стёкол и гаджетов, которые сделают использование смартфона комфортнее.</p>
-                                        <span class="article-card__link">
+                                        <a href="#" class="article-card__link">
                                             Читать статью
                                             <img src="icon/arrow-right.svg" alt="" class="article-card__arrow">
-                                        </span>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -1485,12 +1485,12 @@
                     <form class="lead-form__form" id="leadForm2">
                         <div class="lead-form__fields-inline">
                             <div class="form-group">
-                                <label class="form-label">Ваше имя <span class="form-label__required">*</span></label>
-                                <input type="text" class="form-input" placeholder="Введите имя" required>
+                                <label class="form-label" for="lead2Name">Ваше имя <span class="form-label__required">*</span></label>
+                                <input type="text" id="lead2Name" name="name" class="form-input" placeholder="Введите имя" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Телефон <span class="form-label__required">*</span></label>
-                                <input type="tel" class="form-input" placeholder="+375 (__) ___ -__ - __" required>
+                                <label class="form-label" for="lead2Phone">Телефон <span class="form-label__required">*</span></label>
+                                <input type="tel" id="lead2Phone" name="phone" class="form-input" placeholder="+375 (__) ___ -__ - __" required>
                             </div>
                         </div>
                         <div class="form-group">

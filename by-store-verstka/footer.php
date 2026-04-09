@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2023 ByStore</p>
+                <p class="footer__copyright">© 2026 ByStore</p>
             </div>
         </div>
     </footer>
@@ -78,12 +78,12 @@
             <form class="review-modal__form" id="reviewForm">
                 <div class="review-modal__fields-inline">
                     <div class="form-group">
-                        <label class="form-label">Ваше имя <span class="form-label__required">*</span></label>
-                        <input type="text" class="form-input" placeholder="Введите имя" name="name" required>
+                        <label class="form-label" for="reviewName">Ваше имя <span class="form-label__required">*</span></label>
+                        <input type="text" id="reviewName" name="name" class="form-input" placeholder="Введите имя" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">E-mail</label>
-                        <input type="email" class="form-input" placeholder="test@gmail.com" name="email">
+                        <label class="form-label" for="reviewEmail">E-mail</label>
+                        <input type="email" id="reviewEmail" name="email" class="form-input" placeholder="test@gmail.com">
                     </div>
                 </div>
                 <div class="review-modal__rating">
@@ -107,8 +107,8 @@
                     <label class="form-label">Оцените работу нашего магазина <span class="form-label__required">*</span></label>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Отзыв <span class="form-label__required">*</span></label>
-                    <textarea class="form-textarea" placeholder="Введите текст отзыва" name="review" rows="4" required></textarea>
+                    <label class="form-label" for="reviewText">Отзыв <span class="form-label__required">*</span></label>
+                    <textarea id="reviewText" name="review" class="form-textarea" placeholder="Введите текст отзыва" name="review" rows="4" required></textarea>
                 </div>
                 <div class="review-modal__actions">
                     <button type="submit" class="btn btn--primary">Отправить отзыв</button>

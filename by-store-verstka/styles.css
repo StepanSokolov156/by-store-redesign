@@ -1,3 +1,6 @@
+/* Component Import (must precede all other rules) */
+@import 'styles-components.css';
+
 /* ===========================================
    CSS Custom Properties (Design Tokens)
    =========================================== */
@@ -12,7 +15,7 @@
     --color-bg: #F5F5F7;
     --color-bg-secondary: #f5f5f5;
     --color-bg-light: #fafafa;
-    --color-bg-card: var(--color-bg-card); /* New: card background */
+    --color-bg-card: #ffffff; /* card background */
     --color-border: #e0e0e0;
     --color-border-light: #eeeeee;
     --color-success: #4caf50;
@@ -86,11 +89,6 @@
     --z-dropdown: 500;
     --z-modal: 1100;
 }
-
-/* ===========================================
-   Component Import
-   =========================================== */
-@import 'styles-components.css';
 
 /* ===========================================
    Reset & Base Styles
