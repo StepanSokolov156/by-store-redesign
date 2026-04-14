@@ -494,6 +494,41 @@
 }
 
 /* ===========================================
+   Category Card Image Hover
+   =========================================== */
+.popular-category-card__image-wrap,
+.catalog-card__image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-category-card__image-wrap img,
+.catalog-card__image-wrap img {
+    width: 100%;
+    height: 146px;
+    object-fit: contain;
+    transition: opacity var(--transition-fast), transform var(--transition-base);
+}
+
+.popular-category-card__image--hover,
+.catalog-card__image--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.popular-category-card:hover .popular-category-card__image--main,
+.catalog-card:hover .catalog-card__image--main {
+    opacity: 0;
+}
+
+.popular-category-card:hover .popular-category-card__image--hover,
+.catalog-card:hover .catalog-card__image--hover {
+    opacity: 1;
+}
+
+/* ===========================================
    Utilities
    =========================================== */
 
