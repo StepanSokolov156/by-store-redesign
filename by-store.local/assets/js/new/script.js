@@ -1030,55 +1030,16 @@ BYStore.cart = {
     },
 
     initAddToCartAnimation() {
-        document.querySelectorAll('.btn--primary').forEach(btn => {
-            if (btn.textContent.trim() === 'Купить') {
-                btn.addEventListener('click', () => this.animateAddToCart(btn));
-            }
-        });
-    },
-
-    animateAddToCart(btn) {
-        const productCard = btn.closest('.product-card');
-        if (!productCard) return;
-
-        const flyingImg = productCard.querySelector('img');
-        const cartIcon = document.querySelector('.header__action--cart');
-        if (!flyingImg || !cartIcon) return;
-
-        const flyer = flyingImg.cloneNode();
-        flyer.style.cssText = `
-            position: fixed; z-index: 9999; pointer-events: none;
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-            width: 50px; height: 50px; object-fit: contain;
-        `;
-
-        const flyerRect = flyingImg.getBoundingClientRect();
-        flyer.style.left = flyerRect.left + 'px';
-        flyer.style.top = flyerRect.top + 'px';
-
-        document.body.appendChild(flyer);
-
-        setTimeout(() => {
-            const cartRect = cartIcon.getBoundingClientRect();
-            flyer.style.left = cartRect.left + 'px';
-            flyer.style.top = cartRect.top + 'px';
-            flyer.style.opacity = '0';
-            flyer.style.transform = 'scale(0.2)';
-        }, 50);
-
-        setTimeout(() => {
-            flyer.remove();
-            this.updateCounter();
-        }, 850);
-    },
-
-    updateCounter() {
-        const counter = document.querySelector('.header__action--cart .header__action-count');
-        if (counter) {
-            const count = parseInt(counter.textContent) || 0;
-            counter.textContent = count + 1;
-            counter.style.animation = 'pulse 0.3s ease';
-            setTimeout(() => { counter.style.animation = ''; }, 300);
+        // miniShop2 handles form submit, AJAX, and counter update via ms2_total_count/ms2_total_cost.
+        // We just add a visual pulse on the counter when it changes.
+        const counter = document.querySelector('#msMiniCart .ms2_total_count');
+        if (counter && typeof MutationObserver !== 'undefined') {
+            new MutationObserver(() => {
+                if (counter.textContent) {
+                    counter.style.animation = 'pulse 0.3s ease';
+                    setTimeout(() => { counter.style.animation = ''; }, 300);
+                }
+            }).observe(counter, {childList: true});
         }
     }
 };
