@@ -45,14 +45,13 @@ if ($section == 4) {
 // --- 1. Получаем товары ---
 $sql = "SELECT p.id, p.pagetitle, p.uri, p.parent,
                ms.price, ms.old_price,
-               tvImg.value as image
+               ms.image
         FROM `{$c}` p
         INNER JOIN `{$ms}` ms ON ms.id = p.id
         INNER JOIN `{$tv}` tvSec
             ON tvSec.contentid = p.id
             AND tvSec.tmplvarid = (SELECT id FROM `{$tvr}` WHERE name = '{$tvName}' LIMIT 1)
             AND tvSec.value {$tvCondition}
-        LEFT JOIN `{$tv}` tvImg ON tvImg.contentid = p.id AND tvImg.tmplvarid = 1
         WHERE p.class_key = 'msProduct'
           AND p.published = 1
           AND p.deleted = 0
@@ -71,19 +70,23 @@ $root = 8;
 // Собираем всех родителей товаров
 $allParentIds = array_unique(array_map('intval', array_column($products, 'parent')));
 
-// Кэш: id => [parent, uri]
+// Кэш: id => [parent, uri, pagetitle]
 $nodeCache = array();
 $idsToLoad = $allParentIds;
 
 while (!empty($idsToLoad)) {
     $ids = implode(',', array_map('intval', $idsToLoad));
-    $s = $modx->query("SELECT id, parent, uri FROM `{$c}` WHERE id IN ({$ids})");
+    $s = $modx->query("SELECT id, parent, uri, pagetitle FROM `{$c}` WHERE id IN ({$ids})");
     if (!$s) break;
     $next = array();
     while ($row = $s->fetch(PDO::FETCH_ASSOC)) {
         $id = (int)$row['id'];
         if (isset($nodeCache[$id])) continue;
-        $nodeCache[$id] = array('parent' => (int)$row['parent'], 'uri' => $row['uri']);
+        $nodeCache[$id] = array(
+            'parent'    => (int)$row['parent'],
+            'uri'       => $row['uri'],
+            'pagetitle' => $row['pagetitle'],
+        );
         $par = (int)$row['parent'];
         if ($par > 0 && !isset($nodeCache[$par])) {
             $next[] = $par;
@@ -93,7 +96,7 @@ while (!empty($idsToLoad)) {
 }
 
 // Для каждого товара находим top-level категорию
-$topCats = array();          // [catId => uri]
+$topCats = array();          // [catId => [uri, pagetitle]]
 $productCatMap = array();    // [productId => uri]
 
 foreach ($products as $prod) {
@@ -102,7 +105,10 @@ foreach ($products as $prod) {
     while ($iterations < 10 && isset($nodeCache[$pid])) {
         $par = $nodeCache[$pid]['parent'];
         if ($par === $root) {
-            $topCats[$pid] = $nodeCache[$pid]['uri'];
+            $topCats[$pid] = array(
+                'uri'       => $nodeCache[$pid]['uri'],
+                'pagetitle' => $nodeCache[$pid]['pagetitle'],
+            );
             $productCatMap[$prod['id']] = $nodeCache[$pid]['uri'];
             break;
         }
@@ -114,17 +120,10 @@ foreach ($products as $prod) {
 // --- 3. Генерируем кнопки фильтра ---
 $filterHtml = '<button class="products-filter__btn products-filter__btn--active" data-category="all">Все</button>';
 
-if (!empty($topCats)) {
-    $catIds = implode(',', array_map('intval', array_keys($topCats)));
-    $s = $modx->query("SELECT id, pagetitle FROM `{$c}` WHERE id IN ({$catIds}) ORDER BY menuindex ASC");
-    if ($s) {
-        while ($row = $s->fetch(PDO::FETCH_ASSOC)) {
-            $catId = (int)$row['id'];
-            $uri = htmlspecialchars($topCats[$catId], ENT_QUOTES, 'UTF-8');
-            $name = htmlspecialchars($row['pagetitle'], ENT_QUOTES, 'UTF-8');
-            $filterHtml .= '<button class="products-filter__btn" data-category="' . $uri . '">' . $name . '</button>';
-        }
-    }
+foreach ($topCats as $catId => $cat) {
+    $uri  = htmlspecialchars($cat['uri'], ENT_QUOTES, 'UTF-8');
+    $name = htmlspecialchars($cat['pagetitle'], ENT_QUOTES, 'UTF-8');
+    $filterHtml .= '<button class="products-filter__btn" data-category="' . $uri . '">' . $name . '</button>';
 }
 
 // --- 4. Генерируем карточки товаров ---

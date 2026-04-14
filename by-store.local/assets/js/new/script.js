@@ -617,33 +617,8 @@ BYStore.sliders = {
     },
 
     populateFilters() {
-        document.querySelectorAll('.products-filter').forEach(filterEl => {
-            const section = filterEl.closest('.products-section');
-            if (!section) return;
-
-            const slides = section.querySelectorAll('.swiper-slide[data-category]');
-            const categories = new Map();
-            slides.forEach(slide => {
-                const cat = slide.getAttribute('data-category');
-                if (cat) categories.set(cat, true);
-            });
-
-            if (categories.size === 0) return;
-
-            let html = '<button class="products-filter__btn products-filter__btn--active" data-category="all">Все</button>';
-
-            // Get category names from data attributes on slides (title stored by server)
-            // We need category names - collect them from the product card titles or use a map
-            // For now, use IDs and fetch names from data-category-name attributes if available
-            categories.forEach((_, catId) => {
-                // Find first slide with this category to get the name
-                const slide = section.querySelector(`.swiper-slide[data-category="${catId}"]`);
-                const catName = slide ? slide.getAttribute('data-category-name') : catId;
-                html += `<button class="products-filter__btn" data-category="${catId}">${catName || catId}</button>`;
-            });
-
-            filterEl.innerHTML = html;
-        });
+        // Filter buttons are now generated server-side by sectionProducts snippet.
+        // No need to rebuild them here — only initialize click handlers.
     },
 
     initProductFilters() {
