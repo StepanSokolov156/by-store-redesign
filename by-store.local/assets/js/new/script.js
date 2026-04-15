@@ -1079,11 +1079,14 @@ BYStore.forms = {
             }
         });
 
-        // Star rating
+        // Star rating — set hidden input for AjaxForm
         stars.forEach(star => {
             star.addEventListener('click', () => {
-                BYStore.state.reviewRating = parseInt(star.getAttribute('data-rating'));
-                this.updateStars(BYStore.state.reviewRating);
+                const rating = parseInt(star.getAttribute('data-rating'));
+                BYStore.state.reviewRating = rating;
+                this.updateStars(rating);
+                const ratingInput = document.getElementById('reviewRatingInput');
+                if (ratingInput) ratingInput.value = rating;
             });
 
             star.addEventListener('mouseenter', () => {
@@ -1095,10 +1098,6 @@ BYStore.forms = {
                 this.updateStars(BYStore.state.reviewRating);
             });
         });
-
-        if (form) {
-            form.addEventListener('submit', (e) => this.handleReviewSubmit(e, form));
-        }
     },
 
     openReviewModal() {
@@ -1111,6 +1110,9 @@ BYStore.forms = {
         const modal = document.getElementById('reviewModal');
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        // Reset stars after modal close
+        BYStore.state.reviewRating = 0;
+        this.updateStars(0);
     },
 
     updateStars(rating) {
@@ -1119,40 +1121,6 @@ BYStore.forms = {
             const starRating = parseInt(star.getAttribute('data-rating'));
             star.classList.toggle('review-modal__star--active', starRating <= rating);
         });
-    },
-
-    handleReviewSubmit(e, form) {
-        e.preventDefault();
-
-        if (BYStore.state.reviewRating === 0) {
-            alert('Пожалуйста, поставьте оценку');
-            return;
-        }
-
-        if (!this.validateForm(form)) {
-            return;
-        }
-
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Отправка...';
-
-        setTimeout(() => {
-            submitButton.textContent = 'Спасибо за отзыв!';
-            submitButton.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
-
-            setTimeout(() => {
-                form.reset();
-                BYStore.state.reviewRating = 0;
-                this.updateStars(0);
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-                submitButton.style.background = '';
-                this.closeReviewModal();
-            }, 2000);
-        }, 1500);
     },
 
     initPhoneFormatting() {
