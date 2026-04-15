@@ -1,8 +1,11 @@
--- UP: Fix reviews MIGX TV — embed formtabs and columns in input_properties
+-- UP: Fix reviews MIGX TV — set input_properties via PHP script
 -- Applied: 2026-04-15
+-- NOTE: This migration cannot be applied via raw SQL due to PHP serialization
+--       escaping issues. Run _fix_migx_reviews.php instead:
+--       php _fix_migx_reviews.php
+-- The script uses PDO to properly serialize and store the input_properties.
 
-UPDATE `Modx-BYStoresite_tmplvars` SET `input_properties` = 'a:7:{s:7:"configs";s:7:"reviews";s:8:"formtabs";s:752:"[{\"MIGX_id\":\"1\",\"caption\":\"Отзыв\",\"fields\":[{\"MIGX_id\":\"1\",\"field\":\"name\",\"caption\":\"Имя автора\",\"description\":\"\",\"description_is_code\":\"0\",\"inputTV\":\"\",\"inputTVtype\":\"textfield\",\"validation\":\"\",\"configs\":\"\",\"restrictive_condition\":\"\",\"display\":\"\",\"sourceFrom\":\"config\",\"sources\":\"\",\"inputOptionValues\":\"\",\"default\":\"\",\"useDefaultIfEmpty\":\"0\",\"pos\":\"1\"},{\"MIGX_id\":\"2\",\"field\":\"rating\",\"caption\":\"Оценка (1-5)\",\"description\":\"\",\"description_is_code\":\"0\",\"inputTV\":\"\",\"inputTVtype\":\"numberfield\",\"validation\":\"\",\"configs\":\"\",\"restrictive_condition\":\"\",\"display\":\"\",\"sourceFrom\":\"config\",\"sources\":\"\",\"inputOptionValues\":\"\",\"default\":\"5\",\"useDefaultIfEmpty\":\"0\",\"pos\":\"2\"},{\"MIGX_id\":\"3\",\"field\":\"text\",\"caption\":\"Текст отзыва\",\"description\":\"\",\"description_is_code\":\"0\",\"inputTV\":\"\",\"inputTVtype\":\"textarea\",\"validation\":\"\",\"configs\":\"\",\"restrictive_condition\":\"\",\"display\":\"\",\"sourceFrom\":\"config\",\"sources\":\"\",\"inputOptionValues\":\"\",\"default\":\"\",\"useDefaultIfEmpty\":\"0\",\"pos\":\"3\"},{\"MIGX_id\":\"4\",\"field\":\"date\",\"caption\":\"Дата\",\"description\":\"Формат: DD.MM.YYYY\",\"description_is_code\":\"0\",\"inputTV\":\"\",\"inputTVtype\":\"textfield\",\"validation\":\"\",\"configs\":\"\",\"restrictive_condition\":\"\",\"display\":\"\",\"sourceFrom\":\"config\",\"sources\":\"\",\"inputOptionValues\":\"\",\"default\":\"\",\"useDefaultIfEmpty\":\"0\",\"pos\":\"4\"}]}]";s:7:"columns";s:422:"[{\"MIGX_id\":\"1\",\"header\":\"Имя\",\"dataIndex\":\"name\",\"sortable\":\"false\",\"width\":\"\",\"renderer\":\"\",\"editor\":\"\"},{\"MIGX_id\":\"2\",\"header\":\"Оценка\",\"dataIndex\":\"rating\",\"sortable\":\"false\",\"width\":\"80\",\"renderer\":\"\",\"editor\":\"\"},{\"MIGX_id\":\"3\",\"header\":\"Текст\",\"dataIndex\":\"text\",\"sortable\":\"false\",\"width\":\"\",\"renderer\":\"\",\"editor\":\"\"},{\"MIGX_id\":\"4\",\"header\":\"Дата\",\"dataIndex\":\"date\",\"sortable\":\"false\",\"width\":\"120\",\"renderer\":\"\",\"editor\":\"\"}]";s:7:"btntext";s:0:"";s:10:"previewurl";s:0:"";s:10:"jsonvarkey";s:0:"";s:19:"autoResourceFolders";s:5:"false";}'
-WHERE `id` = 66;
+-- No SQL here — see _fix_migx_reviews.php
 
 -- DOWN
--- UPDATE `Modx-BYStoresite_tmplvars` SET `input_properties` = '...' WHERE `id` = 66;
+-- Re-run the original reviews migration SQL to reset
