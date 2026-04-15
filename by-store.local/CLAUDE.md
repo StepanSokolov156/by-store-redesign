@@ -72,6 +72,8 @@ Exception: custom PHP snippets live as files in `core/elements/snippets/`:
 - `snippet.sectionfilter.php` — generates category filter buttons for homepage product sections
 - `snippet.sectionproducts.php` — product listing for homepage sections (hits, new, sale, recommended)
 - `snippet.mscartstatus.php` — miniShop2 cart status/count for header
+- `snippet.getreviews.php` — reads MIGX TV `reviews_list`, outputs via `review.card` chunk
+- `snippet.getvendors.php` — queries `ms2_vendors` with `show_on_main` flag, outputs via `brand.card` chunk
 
 ### Template System
 Templates use **pdoTools** with **Fenom** template engine. Two syntaxes coexist:
@@ -80,13 +82,25 @@ Templates use **pdoTools** with **Fenom** template engine. Two syntaxes coexist:
 
 ### Main Page Template (ID 1) — Chunk Composition
 ```
-[[$meta]]               [[$hero.section]]        [[$products.hits]]
-[[$header]]             [[$popular.categories]]   [[$products.new]]
-                        [[$catalog.section]]      [[$products.recommended]]
-                        [[$products.sale]]        [[$lead.form.gift]]
-[[$features.section]]   [[$reviews.section]]      [[$blog.section]]
-[[$lead.form.search]]   [[$quickOrderCardFormTpl]] [[$feedbackModalFormTpl]]
-[[$footer]]             [[$scripts]]
+[[$meta]]
+[[$header]]
+[[$hero.section]]
+[[$popular.categories]]
+[[$catalog.section]]
+[[$products.hits]]
+[[$products.new]]
+[[$products.recommended]]
+[[$products.sale]]
+[[$lead.form.gift]]
+[[$features.section]]
+[[$brands.section]]
+[[$reviews.section]]
+[[$blog.section]]
+[[$lead.form.search]]
+[[$quickOrderCardFormTpl]]
+[[$feedbackModalFormTpl]]
+[[$footer]]
+[[$scripts]]
 ```
 
 ### Chunk Architecture (New Design)

@@ -40,6 +40,7 @@ const BYStore = {
     productPage: { },
     categoryFilters: { },
     productVariants: { },
+    quickOrder: { },
 
     /**
      * Initialize all modules
@@ -54,6 +55,7 @@ const BYStore = {
         this.productPage.init();
         this.categoryFilters.init();
         this.productVariants.init();
+        this.quickOrder.init();
         console.log('%c BY Store ', 'background: linear-gradient(135deg, #d73fab 0%, #6a0bd4 100%); color: #ffffff; font-size: 16px; font-weight: bold; padding: 10px 20px; border-radius: 8px;');
         console.log('%c Интернет-магазин электроники v2.0.0 ', 'color: #666; font-size: 12px;');
     }
@@ -1150,6 +1152,79 @@ BYStore.forms = {
                 }
             });
         });
+    }
+};
+
+// ===========================================
+// Quick Order Module
+// ===========================================
+BYStore.quickOrder = {
+    init() {
+        this.initModal();
+    },
+
+    initModal() {
+        const modal = document.getElementById('quickOrderModal');
+        if (!modal) return;
+
+        const overlay = document.getElementById('quickOrderModalOverlay');
+        const closeBtn = document.getElementById('quickOrderModalClose');
+
+        // Delegate click on all "Купить в 1 клик" buttons
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.js-quick-order');
+            if (btn) {
+                e.preventDefault();
+                this.openModal(btn);
+            }
+        });
+
+        if (overlay) overlay.addEventListener('click', () => this.closeModal());
+        if (closeBtn) closeBtn.addEventListener('click', () => this.closeModal());
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                this.closeModal();
+            }
+        });
+
+        // Close modal after successful AjaxForm submission
+        document.addEventListener('af_complete', (e) => {
+            if (e.detail.form && e.detail.form.id === 'quickOrderForm' && e.detail.success) {
+                setTimeout(() => this.closeModal(), 2000);
+            }
+        });
+    },
+
+    openModal(btn) {
+        const modal = document.getElementById('quickOrderModal');
+        const titleEl = document.getElementById('quickOrderProductTitle');
+        const priceEl = document.getElementById('quickOrderProductPrice');
+        const pagetitleInput = document.getElementById('quickOrderPagetitle');
+        const priceInput = document.getElementById('quickOrderPrice');
+
+        const title = btn.dataset.productTitle || '';
+        const price = btn.dataset.productPrice || '';
+
+        if (titleEl) titleEl.textContent = title;
+        if (priceEl && priceEl.querySelector('span')) {
+            priceEl.querySelector('span').textContent = price ? price + ' руб.' : '';
+        }
+        if (pagetitleInput) pagetitleInput.value = title;
+        if (priceInput) priceInput.value = price;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    },
+
+    closeModal() {
+        const modal = document.getElementById('quickOrderModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Reset form
+        const form = document.getElementById('quickOrderForm');
+        if (form) form.reset();
     }
 };
 

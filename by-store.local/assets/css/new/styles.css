@@ -3146,7 +3146,7 @@ ul, ol {
     background: #ffffff;
     border-radius: 4px;
     padding: 20px 12px;
-    height: 268px;
+    height: auto;
 }
 
 .review-card__content {
@@ -3154,7 +3154,7 @@ ul, ol {
     flex-direction: column;
     gap: 12px;
     flex: 1;
-    min-height: 0;
+    min-height: 150px;
 }
 
 .review-card__stars {
@@ -3385,6 +3385,140 @@ ul, ol {
 }
 
 .review-modal__policy {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===========================================
+   Quick Order Modal
+   =========================================== */
+.quick-order-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.quick-order-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.quick-order-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.quick-order-modal.active .quick-order-modal__overlay {
+    opacity: 1;
+}
+
+.quick-order-modal__content {
+    position: relative;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 30px;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: scale(0.9);
+    transition: transform var(--transition-base);
+}
+
+.quick-order-modal.active .quick-order-modal__content {
+    transform: scale(1);
+}
+
+.quick-order-modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.quick-order-modal__close:hover {
+    opacity: 0.7;
+}
+
+.quick-order-modal__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quick-order-modal__title {
+    font-size: var(--font-size-3xl);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.quick-order-modal__product-title {
+    font-size: var(--font-size-base);
+    color: var(--color-text-gray);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.quick-order-modal__product-price {
+    display: flex;
+    align-items: center;
+}
+
+.quick-order-modal__product-price span {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.quick-order-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quick-order-modal__fields-inline {
+    display: flex;
+    gap: 12px;
+}
+
+.quick-order-modal__fields-inline .form-group {
+    flex: 1;
+}
+
+.quick-order-modal__actions {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.quick-order-modal__actions .btn {
+    flex-shrink: 0;
+}
+
+.quick-order-modal__policy {
     font-size: 14px;
     color: var(--color-text);
     line-height: 1.5;
@@ -3800,6 +3934,39 @@ ul, ol {
     }
 
     .review-modal__policy {
+        text-align: center;
+    }
+
+    /* Quick Order Modal Responsive */
+    .quick-order-modal {
+        padding: 12px;
+    }
+
+    .quick-order-modal__content {
+        padding: 30px 12px;
+        max-width: 330px;
+        gap: 20px;
+    }
+
+    .quick-order-modal__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .quick-order-modal__fields-inline {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .quick-order-modal__actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quick-order-modal__actions .btn {
+        width: 100%;
+    }
+
+    .quick-order-modal__policy {
         text-align: center;
     }
 
