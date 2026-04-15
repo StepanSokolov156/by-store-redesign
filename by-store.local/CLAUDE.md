@@ -70,6 +70,8 @@ Templates, chunks, snippets, and plugins live in the **database**, not as files.
 Exception: custom PHP snippets live as files in `core/elements/snippets/`:
 - `snippet.gettopparent.php` — traverses parent chain to find top-level category
 - `snippet.sectionfilter.php` — generates category filter buttons for homepage product sections
+- `snippet.sectionproducts.php` — product listing for homepage sections (hits, new, sale, recommended)
+- `snippet.mscartstatus.php` — miniShop2 cart status/count for header
 
 ### Template System
 Templates use **pdoTools** with **Fenom** template engine. Two syntaxes coexist:

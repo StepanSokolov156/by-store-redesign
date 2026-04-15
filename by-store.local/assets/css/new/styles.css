@@ -12,7 +12,7 @@
     --color-bg: #F5F5F7;
     --color-bg-secondary: #f5f5f5;
     --color-bg-light: #fafafa;
-    --color-bg-card: var(--color-bg-card); /* New: card background */
+    --color-bg-card: #DFDDE3; /* New: card background */
     --color-border: #e0e0e0;
     --color-border-light: #eeeeee;
     --color-success: #4caf50;
@@ -2941,6 +2941,43 @@ ul, ol {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+}
+
+/* Form validation errors */
+.form-input--error {
+    box-shadow: 0 0 0 2px #e53935;
+}
+
+.form-textarea.form-input--error,
+.lead-form--alt .form-input--error {
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.7);
+}
+
+.form-error {
+    display: block;
+    font-size: 13px;
+    color: #e53935;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+/* AjaxForm messages */
+.af-message {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.af-message-error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.af-message-success {
+    background: #e8f5e9;
+    color: #2e7d32;
 }
 
 /* ===========================================
