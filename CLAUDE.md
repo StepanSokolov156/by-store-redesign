@@ -14,7 +14,7 @@ Local OSPanel 6 development environment for a Belarusian electronics e-commerce 
 
 ## Task Context
 
-Integrating the new design from `by-store-verstka/` into the existing MODX + miniShop2 site at `by-store.local/`. Main page integration is largely complete; next pages TBD.
+Integrating the new design from `by-store-verstka/` into the existing MODX + miniShop2 site at `by-store.local/`. Main page and catalog page integration are complete; breadcrumbs added to all inner templates. Next pages TBD (category, product, trade-in).
 
 ## Quick Reference
 

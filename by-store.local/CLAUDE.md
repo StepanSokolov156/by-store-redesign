@@ -113,6 +113,26 @@ Templates use **pdoTools** with **Fenom** template engine. Two syntaxes coexist:
     [[$scripts]]
 ```
 
+### Inner Page Templates — Shared Pattern
+All inner templates (IDs 2–11, 13–23) share the same header/breadcrumbs/footer structure:
+```
+[[$header]]
+
+        [[$breadcrumbs]]
+
+        <main class="main">
+            ...page-specific content...
+        </main>
+
+        [[$quickOrderCardFormTpl]]
+
+        [[$footer]]
+```
+
+Key inner templates:
+- **Template 10** (ID 10) — Catalog page: `[[$popular.categories]]` + `[[$all.categories]]`
+- Other inner templates (category, product, etc.) still use old design — pending integration
+
 ### Chunk Architecture (New Design)
 - **Atomic:** 1 chunk = 1 responsibility (e.g., `hero.banner`, `hero.products`, `product.card`)
 - **Reusable:** repeated blocks become shared components
@@ -169,7 +189,7 @@ Hundreds of 301 SEO redirects at the top, MODX friendly URL rewrites at the bott
 | 2026-04-08 | 9 | Header, meta, footer, hero (MIGX), main template, search, placeholder chunks |
 | 2026-04-14 | 7 | Category image TVs, popular catalog, product sections, add-to-cart, favorites, comparison, show-on-sale TV |
 | 2026-04-15 | 7 | Blog, dynamic brands, features fix, MIGX reviews, lead forms, quick order, reviews section |
-| 2026-04-18 | 2 | Fix new slider classes, remove feedback modal |
+| 2026-04-18 | 5 | Breadcrumbs, catalog page, inner template header/breadcrumbs, slider fix, remove feedback modal |
 
 `migrations/modx_local_dump.sql` is a full DB snapshot (41MB), not an incremental migration — used for fresh environment setup only.
 
