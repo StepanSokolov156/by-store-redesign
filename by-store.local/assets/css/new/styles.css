@@ -5153,15 +5153,12 @@ ul, ol {
 
 /* Specs Table */
 .specs-table {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    column-count: 2;
+    column-gap: 30px;
 }
 
 .specs-table__column {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    break-inside: avoid;
 }
 
 .specs-table__row {
@@ -5169,6 +5166,7 @@ ul, ol {
     align-items: flex-end;
     gap: 4px;
     padding: 12px 0;
+    break-inside: avoid;
 }
 
 .specs-table__label {
