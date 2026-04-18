@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-MODX Revolution + miniShop2 e-commerce site for **by-store.by** (Belarusian electronics retailer). Currently integrating a new design from `../by-store-verstka/` (static PHP mockups) into this MODX site. Active focus: **main page redesign**.
+MODX Revolution + miniShop2 e-commerce site for **by-store.by** (Belarusian electronics retailer). Integrating a new design from `../by-store-verstka/` (static PHP mockups) into this MODX site. Main page integration is **largely complete**; next pages TBD.
 
 ## Common Commands
 
@@ -103,10 +103,14 @@ Templates use **pdoTools** with **Fenom** template engine. Two syntaxes coexist:
 [[$reviews.section]]
 [[$blog.section]]
 [[$lead.form.search]]
-[[$quickOrderCardFormTpl]]
-[[$feedbackModalFormTpl]]
-[[$footer]]
-[[$scripts]]
+        </main>
+
+        [[$quickOrderCardFormTpl]]
+
+        [[$footer]]
+    </div>
+
+    [[$scripts]]
 ```
 
 ### Chunk Architecture (New Design)
@@ -165,6 +169,7 @@ Hundreds of 301 SEO redirects at the top, MODX friendly URL rewrites at the bott
 | 2026-04-08 | 9 | Header, meta, footer, hero (MIGX), main template, search, placeholder chunks |
 | 2026-04-14 | 7 | Category image TVs, popular catalog, product sections, add-to-cart, favorites, comparison, show-on-sale TV |
 | 2026-04-15 | 7 | Blog, dynamic brands, features fix, MIGX reviews, lead forms, quick order, reviews section |
+| 2026-04-18 | 2 | Fix new slider classes, remove feedback modal |
 
 `migrations/modx_local_dump.sql` is a full DB snapshot (41MB), not an incremental migration — used for fresh environment setup only.
 
