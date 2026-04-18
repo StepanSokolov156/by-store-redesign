@@ -19,8 +19,14 @@ rm -rf core/cache/* core/cache_/*
 # MySQL CLI (host is OSPanel module name, NOT localhost)
 /c/OSPanel/modules/MySQL-8.0/bin/mysql.exe -u root -h "MySQL-8.0" modx_local
 
-# Apply a migration
+# Apply a single migration
 /c/OSPanel/modules/MySQL-8.0/bin/mysql.exe -u root -h "MySQL-8.0" modx_local < migrations/YYYY_MM_DD_action.sql
+
+# Apply all migrations for a date (e.g., Apr 14)
+for f in migrations/2026_04_14_*.sql; do /c/OSPanel/modules/MySQL-8.0/bin/mysql.exe -u root -h "MySQL-8.0" modx_local < "$f"; done
+
+# Quick query
+/c/OSPanel/modules/MySQL-8.0/bin/mysql.exe -u root -h "MySQL-8.0" modx_local -e "SELECT id,name FROM \`Modx-BYStoresite_htmlsnippets\` WHERE name LIKE 'product%';"
 ```
 
 ### URLs
@@ -34,7 +40,7 @@ rm -rf core/cache/* core/cache_/*
 
 ## Stack & Environment
 
-**OSPanel 6** (Windows) — Nginx + PHP 8.0 + MySQL-8.0. Domain: `by-store.local`.
+**OSPanel 6** (Windows) — Apache + PHP 8.0 + MySQL-8.0. Domain: `by-store.local`.
 
 **Database:** `modx_local`, user `root`, no password, host `MySQL-8.0`, charset `utf8mb4`, table prefix `Modx-BYStore` (contains a **hyphen** — must be backtick-quoted in SQL: `` `Modx-BYStore` ``).
 
@@ -152,6 +158,23 @@ BYStore.utils        — debounce, IntersectionObserver animations, smooth scrol
 
 ### .htaccess
 Hundreds of 301 SEO redirects at the top, MODX friendly URL rewrites at the bottom. Never modify the rewrite rules block at the end.
+
+### Migrations Applied So Far
+| Date | Count | Scope |
+|------|-------|-------|
+| 2026-04-08 | 9 | Header, meta, footer, hero (MIGX), main template, search, placeholder chunks |
+| 2026-04-14 | 7 | Category image TVs, popular catalog, product sections, add-to-cart, favorites, comparison, show-on-sale TV |
+| 2026-04-15 | 7 | Blog, dynamic brands, features fix, MIGX reviews, lead forms, quick order, reviews section |
+
+`migrations/modx_local_dump.sql` is a full DB snapshot (41MB), not an incremental migration — used for fresh environment setup only.
+
+### Known Gotchas
+- **DB table prefix has a hyphen:** `Modx-BYStore` — always backtick-quoted in SQL
+- **DB host is module name:** `MySQL-8.0`, not `localhost`
+- **Duplicate icon directory:** `assets/images/new-images/icon/` mirrors `assets/images/new-icons/` (identical files)
+- **Stray files in root:** product/blog images (iphone-17.jpg, poco-*.png, etc.) and temp SQL scripts sit at the webroot instead of `assets/images/` — don't add more
+- **`pobd0.include.php`** at root — unknown provenance, do not modify
+- **Old and new CSS/JS coexist:** both systems load on the same pages during the transition; style conflicts are expected
 
 ## Reference: Verstka Mockups
 
